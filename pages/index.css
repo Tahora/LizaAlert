@@ -2,3 +2,12 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
+/* header css files start*/
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/menu/menu.css);
+@import url(../blocks/header/menu/__link/menu__link.css);
+@import url(../blocks/header/menu/__link/_orange/menu__link_orange.css);
+@import url(../blocks/header/menu/__list-item/menu__list-item.css);
+@import url(../blocks/header/menu/__list/menu__list.css);
+@import url(../blocks/icon/icon.css);
+/* header css files end*/
