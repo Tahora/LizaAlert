@@ -9,6 +9,5 @@
 @import url(../blocks/header/menu/__link/_orange/menu__link_orange.css);
 @import url(../blocks/header/menu/__list-item/menu__list-item.css);
 @import url(../blocks/header/menu/__list/menu__list.css);
-@import url(../blocks/Icon/__course/icon__course.css);
-@import url(../blocks/Icon/__profile/icon__profile.css);
+@import url(../blocks/icon/icon.css);
 /* header css files end*/
