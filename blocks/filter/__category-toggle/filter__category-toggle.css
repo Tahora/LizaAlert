@@ -1,0 +1,15 @@
+.filter__category-toggle {
+    margin: 0 6px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../../images/filter_category_toggle.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+    transition: transform 0.2s;
+}
+.filter__category-container_opened .filter__category-toggle{
+    transform: rotate(180deg);
+}

@@ -1,0 +1,13 @@
+.filter__clear-btn {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s, visibility .2s;
+}
