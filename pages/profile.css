@@ -28,3 +28,8 @@
 @import url(../blocks/input/input.css);
 @import url(../blocks/card/__input-add/card__input-add.css);
 @import url(../blocks/card/__input-text/card__input-text.css);
+@import url(../blocks/btn/__icon/btn__icon.css);
+@import url(../blocks/btn/_active/btn_active.css);
+@import url(../blocks/btn/btn.css);
+@import url(../blocks/profile/__exit-btn/profile__exit-btn.css);
+@import url(../blocks/profile/__submit-btn/profile__submit-btn.css);

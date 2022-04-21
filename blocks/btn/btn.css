@@ -1,0 +1,38 @@
+.btn {
+  min-width: 224px;
+  min-height: 48px;
+  width: 248px;
+  background-color: #fff;
+  border: 1.2px solid #e6e7eb;
+  border-radius: 16px;
+  padding: 11px 55px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  font-family: "Golos", sans-serif;
+  color: #ff6600;
+  text-align: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: all .8s ease-in-out;
+  margin: auto;
+}
+
+.btn[disabled] {
+  color: #d2d5db;
+  background: #e6e7eb;
+  cursor: not-allowed;
+  border: none;
+  color: #9397A3;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #ff6600;
+}
+
