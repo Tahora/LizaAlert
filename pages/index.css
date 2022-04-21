@@ -19,12 +19,12 @@
 @import url(../blocks/filter/__title/filter__title.css);
 @import url(../blocks/filter/__clear-btn/filter__clear-btn.css);
 @import url(../blocks/filter/__clear-btn/_show/filter__clear-btn_show.css);
-@import url(../blocks/filter/__category/filter__category.css    );
+@import url(../blocks/filter/__category/filter__category.css);
 @import url(../blocks/filter/__category-container/filter__category-container.css);
 @import url(../blocks/filter/__category-title/filter__category-title.css);
 @import url(../blocks/filter/__category-toggle/filter__category-toggle.css);
-@import url(../blocks/filter/__category-container/_opened/filter__category-container_opened.css);
 @import url(../blocks/filter/__item-container/filter__item-container.css);
+@import url(../blocks/filter/__item-container/_opened/filter__item-container_opened.css);
 @import url(../blocks/filter/__item/filter__item.css);
 @import url(../blocks/filter/__label/filter__label.css);
 @import url(../blocks/filter/__element-gap/filter__element-gap.css);

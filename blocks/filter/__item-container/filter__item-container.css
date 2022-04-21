@@ -1,5 +1,5 @@
 .filter__item-container {
-    margin: 32px 0 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: 0;
@@ -7,4 +7,7 @@
     grid-template-columns: min-content minmax(min-content, max-content);
     align-items:center;
     gap: 16px 11px;
+    height: 0;
+    overflow: hidden;
+    transition: height 2s;
 }
