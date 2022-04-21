@@ -1,0 +1,9 @@
+.card__input {
+    position: relative;
+    margin-bottom: 32px;
+   max-width: 552px;
+    
+}
+.card__input:last-of-type {
+margin-bottom: 0;
+}
