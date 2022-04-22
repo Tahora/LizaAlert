@@ -16,7 +16,6 @@
   cursor: pointer;
   opacity: 1;
   transition: all .8s ease-in-out;
-  margin: auto;
 }
 
 .btn[disabled] {
