@@ -1,0 +1,9 @@
+.filter {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;    
+    width: 312px;
+    display: flex;
+    flex-direction: column;
+    color: #212329;
+}
