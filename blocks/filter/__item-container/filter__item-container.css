@@ -1,13 +1,8 @@
 .filter__item-container {
-    margin: 0;
+    margin: 16px 0 0;
     padding: 0;
     box-sizing: border-box;
-    border: 0;
-    display: grid;
-    grid-template-columns: min-content minmax(min-content, max-content);
-    align-items:center;
-    gap: 16px 11px;
-    height: 0;
-    overflow: hidden;
-    transition: height 2s;
+    display: flex;
+    gap: 11px;
+    align-items: center;
 }

@@ -3,5 +3,5 @@
     padding: 0;
     box-sizing: border-box;    
     border-top: 1px solid #E6E7EB;
-    transition: height 2s;
+    position: relative;
 }
