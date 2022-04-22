@@ -1,3 +1,4 @@
+
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../blocks/page/page.css);
@@ -9,5 +10,14 @@
 @import url(../blocks/header/menu/__link/_orange/menu__link_orange.css);
 @import url(../blocks/header/menu/__list-item/menu__list-item.css);
 @import url(../blocks/header/menu/__list/menu__list.css);
+
 @import url(../blocks/icon/icon.css);
 /* header css files end*/
+@import url(../blocks/Icon/__course/icon__course.css);
+@import url(../blocks/Icon/__profile/icon__profile.css);
+/* header css files end*/
+/* btn css files end*/
+@import url('../blocks/btn/btn.css');
+@import url('../blocks/btn/_active/btn_active.css');
+/* btn css files end*/
+
