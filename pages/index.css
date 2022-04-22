@@ -16,8 +16,32 @@
 @import url(../blocks/Icon/__course/icon__course.css);
 @import url(../blocks/Icon/__profile/icon__profile.css);
 /* header css files end*/
-/* btn css files end*/
-@import url('../blocks/btn/btn.css');
-@import url('../blocks/btn/_active/btn_active.css');
-/* btn css files end*/
+/* filter css files start*/
+@import url(../blocks/filter/filter.css);
+@import url(../blocks/filter/__filters-area/filter__filters-area.css);
+@import url(../blocks/filter/__header/filter__header.css);
+@import url(../blocks/filter/__title/filter__title.css);
+@import url(../blocks/filter/__clear-btn/filter__clear-btn.css);
+@import url(../blocks/filter/__clear-btn/_show/filter__clear-btn_show.css);
+@import url(../blocks/filter/__category/filter__category.css);
+@import url(../blocks/filter/__category-list/filter__category-list.css);
+@import url(../blocks/filter/__category-container/filter__category-container.css);
+@import url(../blocks/filter/__category-title/filter__category-title.css);
+@import url(../blocks/filter/__toggle/filter__toggle.css);
+@import url(../blocks/filter/__toggle/_opened/filter__toggle_opened.css);
+@import url(../blocks/filter/__item-wrapper/filter__item-wrapper.css);
+@import url(../blocks/filter/__item-wrapper/_opened/filter__item-wrapper_opened.css);
+@import url(../blocks/filter/__item-container/filter__item-container.css);
+@import url(../blocks/filter/__item/filter__item.css);
+@import url(../blocks/filter/__label/filter__label.css);
+@import url(../blocks/filter/__tags/filter__tags.css);
+@import url(../blocks/filter/__tag/filter__tag.css);
+@import url(../blocks/filter/__tag-clear/filter__tag-clear.css);
+@import url(../blocks/filter/__tag-name/filter__tag-name.css);
+@import url(../blocks/filter/__element-gap/filter__element-gap.css);
+@import url(../blocks/filter/__hover-reaction/filter__hover-reaction.css);
+/* filter css files end*/
 
+/* reset list properties files start*/
+@import url(../blocks/list/list.css);
+/* reset list properties files end*/
