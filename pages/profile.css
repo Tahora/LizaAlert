@@ -6,5 +6,16 @@
 @import url('../blocks/btn/btn.css');
 @import url('../blocks/btn/_active/btn_active.css');
 @import url('../blocks/btn/__icon/btn__icon.css');
-@import url('../blocks/profile/__submit-btn/profile__submit-btn.css');
-@import url('../blocks/profile/__exit-btn/profile__exit-btn.css');
+
+@import url('../blocks/profile-info/profile-info.css');
+@import url('../blocks/profile-info/__container/profile-info__container.css');
+@import url('../blocks/profile-info/__image/profile-info__image.css');
+@import url('../blocks/profile-info/__name/profile-info__name.css');
+@import url('../blocks/profile-info/__achievements/profile-info__achievements.css');
+@import url('../blocks/profile-info/__achievement-icon/profile-info__achievement-icon.css');
+@import url('../blocks/profile-info/__achievement/profile-info__achievement.css');
+@import url('../blocks/profile-info/__exit-btn/profile-info__exit-btn.css');
+@import url('../blocks/profile-info/__submit-btn/profile__submit-btn.css');
+
+
+
