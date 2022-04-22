@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/profile.css">
-    <title>Профиль | ЛизаАлерт</title>
-</head>
-<body class="page"> 
-    <header class="header">
 
-    </header>
-    <main class="content">
-              
-    <input class="btn btn_active profile__submit-btn" type="submit" value="Сохранить изменения">
-    </input>
-    
-    <input class="btn btn_active profile__submit-btn" type="submit" value="Сохранить изменения" disabled >
-    </input>
-    
-    <button class="btn profile__exit-btn">
-      <div class="btn__icon"></div>
-      Выйти из профиля
-    </button>      
-    </main>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./pages/profile.css" />
+  <title>Профиль ЛизаАлерт</title>
+</head>
+<body class="page">
+  <header class="header">
+    <a class="header__logo" target="_blank" href="#">Учебная платформа</a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item">
+          <a href="./index.html" class="menu__link">
+            <img src="/images/course black.svg" alt="" class="icon">Курсы
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./profile.html" class="menu__link menu__link_orange">
+            <img src="/images/Profile.svg" alt="" class="icon">Профиль
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content-profile">
+    <h2 class="title">Профиль</h2>
+    <section class="profile">
+      <div class="photo"></div>
+      <div class="information">
+        <div class="about">
+          <div class="card">
+            <h3 class="card__title">Личные данные</h3>
+            <form action="#" class="card__form-about" name="#">
+              <label class="card__form-name" for="fullName">ФИО</label>
+              <div class="card__input">
+                <input type="text" class="card__input-text" name="#" placeholder="Иванов Иван Иванович" id="fullName">
+                <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
+              </div>
+              <label class="card__form-name" for="birthday">Дата рождения</label>
+              <div class="card__input">
+                <input type="date" class="card__input-text" name="#" id="birthday">
+              </div>
+              <label class="card__form-name" for="place">Географический регион</label>
+              <div class="card__input">
+                <input type="text" class="card__input-text" name="#" placeholder="Город проживания" id="place">
+                <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
+              </div>
+              <label class="card__form-name" for="nickname">Позывной на форуме</label>
+              <div class="card__input">
+                <input type="text" class="card__input-text" name="#" placeholder="Если хотите от кого-то скрыться"
+                  id="nickname">
+                <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
+              </div>
+              <label class="card__form-name" for="avatar">Фото</label>
+              <div class="card__input">
+                <input type="text" class="card__input-text" name="#" placeholder="Ваше Фото" id="avatar">
+                <span class="card__input-add"><img src="./images/add-photo.svg"></span>
+              </div>
+              <input class="btn btn_active profile__submit-btn" type="submit" value="Сохранить изменения" disabled>
+              </input>
+            </form>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="card">
+            <h3 class="card__title">Аккаунт</h3>
+            <form action="#" class="card__form-about" name="#">
+              <label class="card__form-name" for="phone">Номер телефона</label>
+              <div class="card__input">
+                <input type="tel" class="card__input-text" name="#" placeholder="+7 123 456 78 90" id="phone">
+              </div>
+              <label class="card__form-name" for="email">Email</label>
+              <div class="card__input">
+                <input type="email" class="card__input-text" placeholder="Ваш адрес электронной почты" name="#"
+                  id="email">
+                <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
+              </div>
+              <label class="card__form-name" for="password">Пароль</label>
+              <div class="card__input">
+                <input type="password" class="card__input-text" name="#" placeholder="Поле для изменения пароля"
+                  id="password">
+                <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
+              </div>
+              <input class="btn btn_active profile__submit-btn" type="submit" value="Сохранить изменения" disabled>
+              </input>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 </body>
+
 </html>
