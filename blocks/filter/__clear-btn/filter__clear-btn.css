@@ -9,5 +9,5 @@
     font-weight: 500;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .25s, visibility .2s;
+    transition: opacity .2s, visibility .15s;
 }

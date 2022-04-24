@@ -1,6 +1,5 @@
 .filter {
-    margin: 0 ;
-    margin-right: 24px ;
+    margin: 0 24px 0 0;
     padding: 0;
     box-sizing: border-box;    
     width: 312px;
