@@ -1,0 +1,5 @@
+.course-list__text-area {
+    display: grid;
+    gap: 24px;
+    padding: 32px 0;
+}
