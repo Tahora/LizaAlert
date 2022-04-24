@@ -1,6 +1,6 @@
 
 @import url(../vendor/normalize.css);
-@import url(../vendor/fonts.css);
+@import url(../vendor/fonts/fonts.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 /* header css files start*/
@@ -33,11 +33,14 @@
 @import url(../blocks/filter/__item-wrapper/_opened/filter__item-wrapper_opened.css);
 @import url(../blocks/filter/__item-container/filter__item-container.css);
 @import url(../blocks/filter/__item/filter__item.css);
+@import url(../blocks/filter/__checkbox/filter__checkbox.css);
+@import url(../blocks/filter/__custom-checkbox/filter__custom-checkbox.css);
+@import url(../blocks/filter/__item-title/filter__item-title.css);
 @import url(../blocks/filter/__label/filter__label.css);
 @import url(../blocks/filter/__tags/filter__tags.css);
 @import url(../blocks/filter/__tag/filter__tag.css);
-@import url(../blocks/filter/__tag-clear/filter__tag-clear.css);
-@import url(../blocks/filter/__tag-name/filter__tag-name.css);
+@import url(../blocks/filter/__tag-cross/filter__tag-cross.css);
+@import url(../blocks/filter/__tag-title/filter__tag-title.css);
 @import url(../blocks/filter/__element-gap/filter__element-gap.css);
 @import url(../blocks/filter/__hover-reaction/filter__hover-reaction.css);
 /* filter css files end*/

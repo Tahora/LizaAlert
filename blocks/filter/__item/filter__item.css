@@ -1,7 +1,6 @@
 .filter__item {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     display: inline-block;
     width: 20px;
     height: 20px;
