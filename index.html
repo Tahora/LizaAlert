@@ -1,18 +1,128 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
     <title>Учебная платформа ЛизаАлерт</title>
-</head>
-<body class="page"> 
+  </head>
+  <body class="page">
     <header class="header">
-
+      <a class="header__logo" target="_blank" href="#">Учебная платформа</a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="./index.html" class="menu__link menu__link_orange">
+              <img src="/images/course.svg" alt="" class="icon" />Курсы
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a href="./profile.html" class="menu__link">
+              <img src="/images/Profile black.svg" alt="" class="icon" />Профиль
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main class="content">
-        
+    <main class="content-profile">
+      <h2 class="title">Курсы</h2>
+      <section class="profile">
+        <section class="filter">
+          <div class="filter__filters-area">
+            <div class="filter__header filter__element-gap">
+              <h2 class="filter__title">Фильтры</h2>
+              <button
+                class="filter__clear-btn filter__clear-btn_show filter__hover-reaction"
+              >
+                Очистить
+              </button>
+            </div>
+            <ul class="filter__category-list list">
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Категория</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Тематика</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Уровень</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+                <fieldset class="filter__item-wrapper">
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Новичок</label>
+                  </div>
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Бывалый</label>
+                  </div>
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Профессионал</label>
+                  </div>
+                </fieldset>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Статус</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+                <fieldset class="filter__item-wrapper">
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Не активный</label>
+                  </div>
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Вы записаны</label>
+                  </div>
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Активный</label>
+                  </div>
+                  <div class="filter__item-container">
+                    <input type="checkbox" class="filter__item" />
+                    <label for="" class="filter__label">Пройден</label>
+                  </div>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <ul class="filter__tags list">
+            <li class="filter__tag">
+              <h4 class="filter__tag-name">Новичок</h4>
+              <button class="filter__tag-clear filter__hover-reaction"></button>
+            </li>
+            <li class="filter__tag">
+              <h4 class="filter__tag-name">Активный</h4>
+              <button class="filter__tag-clear filter__hover-reaction"></button>
+            </li>
+          </ul>
+        </section>
+        <section class="course-list">
+          <section class="course-list__item">course</section>
+          <section class="course-list__item">course</section>
+          <section class="course-list__item">course</section>
+          <section class="course-list__item">course</section>
+        </section>
+      </section>
     </main>
-    
-</body>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

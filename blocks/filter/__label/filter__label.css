@@ -1,0 +1,10 @@
+.filter__label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline;
+    font: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
