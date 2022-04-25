@@ -1,0 +1,4 @@
+.card__form-about {
+    display: flex;
+    flex-direction: column;
+}

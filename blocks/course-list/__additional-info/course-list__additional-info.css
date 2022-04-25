@@ -1,0 +1,7 @@
+.course-list__additional-info {
+    padding: 32px ;
+    display: grid;
+    gap: 16px;
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) auto;
+    justify-items: end;
+}

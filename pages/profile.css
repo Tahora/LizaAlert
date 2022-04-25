@@ -1,3 +1,4 @@
+
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts/fonts.css');
 @import url('../blocks/page/page.css');
@@ -17,5 +18,38 @@
 @import url('../blocks/profile-info/__exit-btn/profile-info__exit-btn.css');
 @import url('../blocks/profile-info/__submit-btn/profile__submit-btn.css');
 
-
-
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+/* header css files start*/
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/menu/menu.css);
+@import url(../blocks/header/menu/__link/menu__link.css);
+@import url(../blocks/header/menu/__link/_orange/menu__link_orange.css);
+@import url(../blocks/header/menu/__list-item/menu__list-item.css);
+@import url(../blocks/header/menu/__list/menu__list.css);
+@import url(../blocks/icon/icon.css);
+/* header css files end*/
+@import url(../blocks/content/content.css);
+@import url(../blocks/title/title.css);
+@import url(../blocks/photo/photo.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/contact/contact.css);
+@import url(../blocks/content-profile/content-profile.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/information/information.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__form-about/card__form-about.css);
+@import url(../blocks/card/__title/card__title.css);
+@import url(../blocks/card/__form-name/card__form-name.css);
+@import url(../blocks/card/__input/card__input.css);
+@import url(../blocks/card/__input-pencile/card__input-pencile.css);
+@import url(../blocks/input/input.css);
+@import url(../blocks/card/__input-add/card__input-add.css);
+@import url(../blocks/card/__input-text/card__input-text.css);
+@import url(../blocks/btn/__icon/btn__icon.css);
+@import url(../blocks/btn/_active/btn_active.css);
+@import url(../blocks/btn/btn.css);
+@import url(../blocks/profile/__exit-btn/profile__exit-btn.css);
+@import url(../blocks/profile/__submit-btn/profile__submit-btn.css);

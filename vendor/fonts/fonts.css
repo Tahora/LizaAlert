@@ -1,5 +1,6 @@
 @font-face {
-    src:
+
+    src: 
     url('../Golos/GolosText-Regular.woff2') format('woff2'),  
     url('../Golos/GolosText-Regular.woff') format('woff'),
     url('../Golos/GolosText-Regular.ttf') format('truetype'),
@@ -19,7 +20,8 @@
 }
 
 @font-face {
-    src:
+
+    src: 
     url('../Golos/GolosText-Bold.woff2') format('woff2'),  
     url('../Golos/GolosText-Bold.woff') format('woff'),
     url('../Golos/GolosText-Bold.ttf') format('truetype'),
