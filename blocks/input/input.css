@@ -3,12 +3,17 @@ input {
     outline: none;
 }
 input[type=date]::-webkit-calendar-picker-indicator {
-   visibility: hidden;
+    opacity: 1;
+        background-image: url("../../images/pencile.svg");
+        background-repeat: no-repeat;
+        background-position: 100% center;
+        background-size: 20px;
+        cursor: pointer;
 }
 input[type = file]::-webkit-file-upload-button {
     position: absolute;
     right: -20px;
-    visibility: hidden;
+    display: none;
 }
 
 input[type = file] {

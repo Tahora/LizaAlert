@@ -3,5 +3,4 @@
     gap: 16px;
     padding: 32px 0;
     grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) auto;
-  
-}
+  }
