@@ -2,10 +2,13 @@ const filter = document.querySelector('.filter');
 const filterCategoryList = filter.querySelector('.filter__category-list');
 const filterTagsContainer = filter.querySelector('.filter__tags');
 const filterClearButton = filter.querySelector('.filter__clear-btn');
-let filterActiveList = [];
 const filterItemHeight = 40; //высота одной строчки фильтра с учётом верхнего отступа
-
+const courseListArray = Array.from(document.querySelectorAll('.course-list__item'));
+let filterActiveList = [];
 //Filter functions start
+//список функций, отвечающих за работу с фильтрами
+
+
 //список функций, отвечающих за фильтрацию
 function returnTitle(id) {
     switch (id) {
@@ -51,9 +54,60 @@ function removeTag(id) {
     tag.remove();
 }
 
-function renderCards() {
-    console.log ('Потрясающе, что дошёл сюда. Нарисую карточки');
+//отрисовка карточек
+function showCourse(courseItem) {
+    if (courseItem.classList.contains('course-list__item_hide')) {
+        courseItem.classList.remove('course-list__item_hide');
+    }
 }
+
+function hideCourse(courseItem) {
+    if (!courseItem.classList.contains('course-list__item_hide')) {
+        courseItem.classList.add('course-list__item_hide');
+    }
+}
+
+/*function getCourseStatus(courseItem) {
+    return courseItem.querySelector('.course-list__parameter_type_status').innerText;
+}*/
+
+function getCourseLevel(courseItem) {
+    const parametrItem = courseItem.querySelector('.course-list__parameter_type_level');
+    return parametrItem.innerText;
+}
+
+function compareCourseWithFilter (courseParam) {
+    if (!filterActiveList.length) {
+        return true;
+    }
+    else {
+        if (filterActiveList.every(activeFilter => {
+            return returnTitle(activeFilter) === courseParam;
+        })) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
+
+function courseSwitchVisible(courseItem) {
+    /*const courseStatus = getCourseStatus(courseItem);*/
+    const courseLevel = getCourseLevel(courseItem);
+    if (/*compareCourseWithFilter(courseStatus) &&*/ compareCourseWithFilter(courseLevel)) {
+        showCourse(courseItem);
+    }
+    else {
+        /*!compareCourseWithFilter(courseStatus) &&*/
+        hideCourse(courseItem);
+    }
+}
+
+function renderCards() {
+    courseListArray.forEach(courseItem => courseSwitchVisible(courseItem));
+}
+//конец отрисовки карточек
 
 function checkClearButton() {
     if (!filterActiveList.length && filterClearButton.classList.contains('filter__clear-btn_show')) {
@@ -62,6 +116,11 @@ function checkClearButton() {
     else if(filterActiveList.length && !filterClearButton.classList.contains('filter__clear-btn_show')) {
         filterClearButton.classList.add('filter__clear-btn_show');
     }
+}
+
+function updateDisplayItems() {
+    renderCards();
+    checkClearButton();
 }
 
 function cancelFilter(filterId) {
@@ -79,8 +138,7 @@ function createTag(checkboxId) {
     tag.id = checkboxId;
     tag.addEventListener('click', () => {
         cancelFilter(tag.id);
-        renderCards();
-        checkClearButton();
+        updateDisplayItems();
     });
     return tag;
   }
@@ -102,16 +160,14 @@ function switchFilter(checkbox){
     if(!checkbox.checked) {
         cancelFilter(checkbox.id);
     }
-    renderCards();
-    checkClearButton();
+    updateDisplayItems();
 }
 
 function resetFilter() {
     filterActiveList.forEach(activeFilter => {
         cancelFilter(activeFilter);
     });
-    renderCards();
-    checkClearButton();
+    updateDisplayItems();
 }
 //конец списка функций, отвечающих за фильтрацию
 
