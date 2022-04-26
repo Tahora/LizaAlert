@@ -1,4 +1,4 @@
 .course-list__button {
-    justify-self: center;
     align-self: end;
+    justify-self: stretch;
 }

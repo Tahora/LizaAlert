@@ -10,3 +10,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
         background-size: 20px;
         cursor: pointer;
 }
+input[type = file]::-webkit-file-upload-button {
+    position: absolute;
+    right: -20px;
+    display: none;
+}
+
+input[type = file] {
+    cursor: pointer;
+}

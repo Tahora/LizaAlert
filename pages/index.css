@@ -63,7 +63,7 @@
 @import url(../blocks/course-list/course-list.css);
 @import url(../blocks/course-list/__additional-info/course-list__additional-info.css);
 @import url(../blocks/course-list/__course-description/course-list__course-description.css);
-@import url(../blocks/course-list/__course-level/course-list__parameter.css);
+@import url(../blocks/course-list/__parameter/course-list__parameter.css);
 @import url(../blocks/course-list/__course-name/course-list__course-name.css);
 @import url(../blocks/course-list/__icon/course-list__icon.css);
 @import url(../blocks/course-list/__image/course-list__image.css);
@@ -71,5 +71,6 @@
 @import url(../blocks/course-list/__info/course-list__info.css);
 @import url(../blocks/course-list/__text-area/course-list__text-area.css);
 @import url(../blocks/course-list/__button/course-list__button.css);
+@import url(../blocks/course-list/__parameters/course-list__parameters.css);
 
 /* cources-list css files end*/
