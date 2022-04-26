@@ -1,32 +1,555 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
     <title>Учебная платформа ЛизаАлерт</title>
-</head>
-<body class="page"> 
+  </head>
+  <body class="page">
     <header class="header">
       <a class="header__logo" target="_blank" href="#">Учебная платформа</a>
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__list-item">
             <a href="./index.html" class="menu__link menu__link_orange">
-                <img src="/images/course.svg" alt="" class="icon">Курсы
+              <img src="/images/course.svg" alt="" class="icon" />Курсы
             </a>
           </li>
           <li class="menu__list-item">
             <a href="./profile.html" class="menu__link">
-                <img src="/images/Profile black.svg" alt="" class="icon">Профиль
+              <img src="/images/Profile black.svg" alt="" class="icon" />Профиль
             </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="content">
-        
+      <h1 class="title">Курсы</h1>
+      <section class="profile">
+        <section class="filter">
+          <div class="filter__filters-area">
+            <div class="filter__header filter__element-gap">
+              <h1 class="filter__title">Фильтры</h1>
+              <button class="filter__clear-btn filter__hover-reaction">
+                Очистить
+              </button>
+            </div>
+            <ul class="filter__category-list list">
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Категория</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Тематика</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Уровень</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+                <fieldset class="filter__item-wrapper">
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="level_beginner"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="level_beginner"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Новичок</span>
+                  </label>
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="level_veteran"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="level_veteran"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Бывалый</span>
+                  </label>
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="level_pro"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="level_pro"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Профессионал</span>
+                  </label>
+                </fieldset>
+              </li>
+              <li class="filter__category filter__element-gap">
+                <div class="filter__category-container">
+                  <h3 class="filter__category-title">Статус</h3>
+                  <button
+                    class="filter__toggle filter__hover-reaction"
+                  ></button>
+                </div>
+                <fieldset class="filter__item-wrapper">
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="status_inactive"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="status_inactive"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Не активный</span>
+                  </label>
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="status_registered"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="status_registered"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Вы записаны</span>
+                  </label>
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="status_active"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="status_active"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Активный</span>
+                  </label>
+                  <label
+                    class="filter__label filter__hover-reaction"
+                    for="status_completed"
+                  >
+                    <input
+                      class="filter__checkbox"
+                      type="checkbox"
+                      id="status_completed"
+                    />
+                    <span class="filter__custom-checkbox"></span>
+                    <span class="filter__item-title">Пройден</span>
+                  </label>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <ul class="filter__tags list"></ul>
+        </section>
+        <section class="course-list">
+          <div class="course-list__item">
+            <img
+              src="./images/cources-cynology.png"
+              alt="Овчарка"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">
+                Кинологическое направление
+              </h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Бывалый
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category1
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Поисково-спасательная работа, следовая работа, а так же поиск
+                тел погибших с помощью собак
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn btn_active course-list__button" type="button">
+                Продолжить
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-duty.png"
+              alt="Телефон в руках"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">Оперативные дежурные</h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Профессионал
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Оперативное реагирование, контроль поступающих заявок и звонков,
+                распределение задач, помощь в решении вопросов, удалённое ...
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn course-list__button" type="button">
+                Записаться
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-unmanned.png"
+              alt="Квадракоптер"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">
+                Беспилотные летательные аппараты
+              </h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Бывалый
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category1
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Применение БПЛА в поиске людей, а так же передача полученной
+                с помощью техники информации спасательным службам
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn course-list__button" type="button">
+                Записаться
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-first-aid.png"
+              alt="Аптечка"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">Первая помощь</h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Бывалый
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category1
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Основы оказания первой помощи на поиске, юридические аспекты,
+                базовые алгоритмы, разбор ошибок при оказания помощи на поиске
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn course-list__button" type="button">
+                Записаться
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-info-group.png"
+              alt="Тетрадь с заметками"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">Инфогруппа</h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Новичок
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Создание ориентировок, заказ карт, связь через мини АТС,
+                обеспечение поиска
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button
+                disabled
+                class="btn btn_active course-list__button"
+                type="button"
+              >
+                Пройден
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-operator.png"
+              alt="Женщина говорит по телефону"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">Операторы 8-800</h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Новичок
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category1
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Приём заявок на поиск людей с последующей передачей информации
+                инфоргам
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn course-list__button" type="button">
+                Записаться
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-shot-calls.png"
+              alt="Женщина говорит по телефону"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">
+                Группа коротких прозвонов
+              </h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Новичок
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category1
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Прозвон больниц, ОВД, различных ведомств, иногда свидетелей
+                и возможных свидетелей
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button class="btn course-list__button" type="button">
+                Записаться
+              </button>
+            </div>
+          </div>
+          <div class="course-list__item">
+            <img
+              src="./images/cources-beginners.png"
+              alt="Волонтёр со спины"
+              class="course-list__image"
+            />
+            <div class="course-list__text-area">
+              <h3 class="course-list__course-name">Новичковая</h3>
+              <div class="course-list__parameters">
+                <p
+                  class="course-list__parameter course-list__parameter_type_level"
+                >
+                  Новичок
+                </p>
+                <p
+                  class="course-list__parameter course-list__parameter_type_category"
+                >
+                  category2
+                </p>
+              </div>
+              <p class="course-list__course-description">
+                Короткое описание курса. людей в лесу и в городе. Все поисковые
+                мероприятия организуются силами добровольцев «ЛизаАлер…
+              </p>
+            </div>
+            <div class="course-list__additional-info">
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-lessons-icon.svg"
+                  alt="Учебник"
+                />
+                144 занятия
+              </p>
+              <p class="course-list__info" href="#">
+                <img
+                  class="course-list__icon"
+                  src="./images/cources-time-icon.svg"
+                  alt="Часы"
+                />
+                144 ч
+              </p>
+              <button
+                disabled
+                class="btn btn_active course-list__button"
+                type="button"
+              >
+                Пройден
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
-    
-</body>
+    <template id="tag-template">
+      <li class="filter__tag filter__hover-reaction">
+        <h4 class="filter__tag-title"></h4>
+        <div class="filter__tag-cross"></div>
+      </li>
+    </template>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

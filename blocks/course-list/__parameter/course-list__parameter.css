@@ -1,0 +1,10 @@
+.course-list__parameter {
+    margin: 0;
+    padding: 0px 8px;
+    background: #E6E7EB;
+    border-radius: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+}
