@@ -3,11 +3,114 @@ const filterCategoryList = filter.querySelector('.filter__category-list');
 const filterTagsContainer = filter.querySelector('.filter__tags');
 const filterClearButton = filter.querySelector('.filter__clear-btn');
 const filterItemHeight = 40; //высота одной строчки фильтра с учётом верхнего отступа
-const courseListArray = Array.from(document.querySelectorAll('.course-list__item'));
+const courseList = document.querySelector('.course-list');
+const courseListArray = Array.from(courseList.querySelectorAll('.course-list__item'));
 let filterActiveList = [];
-//Filter functions start
-//список функций, отвечающих за работу с фильтрами
 
+//Filter functions start
+//отрисовка карточек
+const courseObjects = {
+    cynology: {
+        level: 'level_veteran',
+        status: 'status_registered',
+        visibility: true
+    },
+    operational_duty: {
+        level: 'level_pro',
+        status: 'status_active',
+        visibility: true
+    },
+    aircrafts: {
+        level: 'level_veteran',
+        status: 'status_active',
+        visibility: true
+    },
+    first_aid: {
+        level: 'level_veteran',
+        status: 'status_active',
+        visibility: true
+    },
+    infogroup: {
+        level: 'level_beginner',
+        status: 'status_completed',
+        visibility: true
+    },
+    operators: {
+        level: 'level_beginner',
+        status: 'status_active',
+        visibility: true
+    },
+    short_calls_group: {
+        level: 'level_beginner',
+        status: 'status_active',
+        visibility: true
+    },
+    beginner_search_group: {
+        level: 'level_beginner',
+        status: 'status_completed',
+        visibility: true
+    }
+};
+
+function showCourse(courseItem) {
+    courseItem.classList.remove('course-list__item_hide');
+}
+
+function hideCourse(courseItem) {
+    courseItem.classList.add('course-list__item_hide');
+}
+
+function getActiveLevelFiltres () {
+    return filterActiveList.filter(filter => filter.includes('level_'));
+}
+
+function getActiveStatusFiltres () {
+    return filterActiveList.filter(filter => filter.includes('status_'));
+}
+
+function compareCourseWithFilter (courseObject) {
+    if (!filterActiveList.length) {
+        return true;
+    }
+    else {
+        const statusFiltres = getActiveStatusFiltres();
+        const levelFiltres = getActiveLevelFiltres();
+        let statusCheck = false;
+        let levelCheck = false;
+        if(!statusFiltres.length) {
+            statusCheck = true;
+        }
+        else {
+            statusCheck = statusFiltres.some(statusFilter => statusFilter === courseObject.status);
+        }
+        if(!levelFiltres.length) {
+            levelCheck = true;
+        }
+        else {
+            levelCheck = levelFiltres.some(levelFilter => levelFilter === courseObject.level);
+        }
+        return statusCheck && levelCheck;
+    }
+}
+
+function switchCourseVisible(courseObjectName) {
+    const courseObject = courseObjects[courseObjectName];
+    courseObject.visibility = compareCourseWithFilter(courseObject);
+    const courseItem = courseListArray.find(courseItem => courseItem.id === courseObjectName);
+    if (courseObject.visibility) {
+        showCourse(courseItem);
+    }
+    else {
+        hideCourse(courseItem);
+    }
+}
+
+function renderCards() {
+    for (let courseObject in courseObjects) {
+        switchCourseVisible(courseObject);
+    }
+}
+//конец отрисовки карточек
 
 //список функций, отвечающих за фильтрацию
 function returnTitle(id) {
@@ -53,61 +156,6 @@ function removeTag(id) {
     const tag = filterTagsContainer.querySelector(`#${id}`);
     tag.remove();
 }
-
-//отрисовка карточек
-function showCourse(courseItem) {
-    if (courseItem.classList.contains('course-list__item_hide')) {
-        courseItem.classList.remove('course-list__item_hide');
-    }
-}
-
-function hideCourse(courseItem) {
-    if (!courseItem.classList.contains('course-list__item_hide')) {
-        courseItem.classList.add('course-list__item_hide');
-    }
-}
-
-/*function getCourseStatus(courseItem) {
-    return courseItem.querySelector('.course-list__parameter_type_status').innerText;
-}*/
-
-function getCourseLevel(courseItem) {
-    const parametrItem = courseItem.querySelector('.course-list__parameter_type_level');
-    return parametrItem.innerText;
-}
-
-function compareCourseWithFilter (courseParam) {
-    if (!filterActiveList.length) {
-        return true;
-    }
-    else {
-        if (filterActiveList.every(activeFilter => {
-            return returnTitle(activeFilter) === courseParam;
-        })) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-}
-
-function courseSwitchVisible(courseItem) {
-    /*const courseStatus = getCourseStatus(courseItem);*/
-    const courseLevel = getCourseLevel(courseItem);
-    if (/*compareCourseWithFilter(courseStatus) &&*/ compareCourseWithFilter(courseLevel)) {
-        showCourse(courseItem);
-    }
-    else {
-        /*!compareCourseWithFilter(courseStatus) &&*/
-        hideCourse(courseItem);
-    }
-}
-
-function renderCards() {
-    courseListArray.forEach(courseItem => courseSwitchVisible(courseItem));
-}
-//конец отрисовки карточек
 
 function checkClearButton() {
     if (!filterActiveList.length && filterClearButton.classList.contains('filter__clear-btn_show')) {
@@ -204,6 +252,22 @@ function toggleFiltersSection(toggleButton){
 }
 //конец списка функций раскрывающих/закрывающих фильтры 
 
+//изменение состояния курса при нажатии на его кнопку
+function changeCourseStatus(courseItem) {
+    courseObjects[courseItem.id].status = 'status_registered';
+}
+
+function changeCourseButton(courseButton) {
+    courseButton.classList.add('btn_active');
+    courseButton.textContent = 'Продолжить';
+}
+
+function handleCourseButton(courseButton) {
+    changeCourseStatus(courseButton.closest('.course-list__item'));
+    changeCourseButton(courseButton);
+}
+//конец изменения состояния курса при нажатии на его кнопку
+
 
 //обработка событий блока Filter
 
@@ -221,3 +285,11 @@ filterCategoryList.addEventListener('click', elem => {
 
 filterClearButton.addEventListener('click', resetFilter);
 //Filter functions end
+
+//обработка событий в списке курсов
+courseList.addEventListener('click', elem => {
+    if (elem.target.classList.contains('course-list__button')) {
+        handleCourseButton(elem.target);
+    }
+})
+//конец обработки событий в списке курсов
