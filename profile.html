@@ -30,7 +30,7 @@
     <section class="profile">
       <section class="profile-info">
         <div class="profile-info__container">
-        <img class="profile-info__image" src="./images/user-avatar.jpg">
+        <img class="profile-info__image" src="./images/user-avatar.jpg" id="profileImage">
         <h2 class="profile-info__name">Иванова Анна Сергеевна</h2>
         <ul class="profile-info__achievements">
           <li class="profile-info__achievement">
@@ -59,7 +59,7 @@
             <form action="#" class="card__form-about" name="#">
               <label class="card__form-name" for="fullName">ФИО</label>
               <div class="card__input">
-                <input type="text" class="card__input-text" name="#" placeholder="Иванов Иван Иванович" id="fullName">
+                <input type="text" class="card__input-text" name="userName" placeholder="Иванов Иван Иванович" id="fullName">
                 <span class="card__input-pencile"><img src="./images/pencile.svg"></span>
               </div>
               <label class="card__form-name" for="birthday">Дата рождения</label>
@@ -79,7 +79,7 @@
               </div>
               <label class="card__form-name" for="avatar">Фото</label>
               <div class="card__input">
-                <input type="file" class="card__input-text" name="#" placeholder="Ваше Фото" id="avatar"  accept=".jpg, .jpeg, .png" multiple>
+                <input type="file" class="card__input-text" name="userPhotoInput" placeholder="Ваше Фото" id="avatar"  accept=".jpg, .jpeg, .png" multiple>
                 <span class="card__input-add"><img src="./images/add-photo.svg"></span>
               </div>
               <input class="btn btn_active profile__submit-btn" type="submit" value="Сохранить изменения" disabled>

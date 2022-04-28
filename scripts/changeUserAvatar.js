@@ -1,7 +1,9 @@
 let forms = document.querySelectorAll('form'),
     formsArr = Array.from(forms),
     userName = document.querySelector('.profile-info__name'),
-    userNameInput = document.querySelector('input[name="userName"]');
+    userNameInput = document.querySelector('input[name="userName"]'),
+    userAvatar = document.querySelector(".profile-info__image"),
+    file = document.getElementById("avatar");
 formsArr.forEach((form)=> {
   let inputs = form.querySelectorAll('input'),
       submitBtn = form.querySelector('.profile__submit-btn'),    
@@ -19,11 +21,20 @@ function activateSubmitBtn(btn) {
   btn.removeAttribute('disabled');
 }
 
-
+function changeUserAvatar() {
+    userAvatar.src = URL.createObjectURL(file.files[0]);
+    userAvatar.style.display = "block";
+  };
+function changeUserName(){
+  if(userName.textContent !== userNameInput.value){
+  userName.textContent = userNameInput.value;}
+}
 function submitEdition(form, btn) {
-  userName.textContent = userNameInput.value
+  changeUserName();
+  changeUserAvatar();
   form.addEventListener('submit',(evt)=>{
   evt.preventDefault();
+    
   });
   btn.setAttribute('disabled', true)
 }
