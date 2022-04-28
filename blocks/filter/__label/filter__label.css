@@ -7,5 +7,5 @@
     width: max-content;
     display: flex;
     align-items: center;
+    position: relative;
 }
-

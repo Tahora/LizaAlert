@@ -1,11 +1,20 @@
 const filter = document.querySelector('.filter');
 const filterCategoryList = filter.querySelector('.filter__category-list');
+const filterCheckboxList = Array.from(filterCategoryList.querySelectorAll('.filter__checkbox'));
 const filterTagsContainer = filter.querySelector('.filter__tags');
 const filterClearButton = filter.querySelector('.filter__clear-btn');
 const filterItemHeight = 40; //высота одной строчки фильтра с учётом верхнего отступа
 const courseList = document.querySelector('.course-list');
 const courseListArray = Array.from(courseList.querySelectorAll('.course-list__item'));
 let filterActiveList = [];
+
+//список конфликтующих между собой фильтров:
+//например, при активации фильтра 'status_inactive'
+//'status_active' станет disable
+const conflictFiltersList = {
+    status_inactive: ['status_active'],
+    status_active: ['status_inactive']
+}
 
 //Filter functions start
 //отрисовка карточек
@@ -112,6 +121,32 @@ function renderCards() {
 }
 //конец отрисовки карточек
 
+//Раздел взаимоисключения фильтров
+function disableCheckbox(checkboxId) {
+    const conflictFilter = filterCheckboxList.find(checkbox => checkbox.id === checkboxId);
+    conflictFilter.closest('.filter__label').classList.remove('filter__hover-reaction');
+    conflictFilter.disabled = true;
+};
+
+function enableCheckbox(checkboxId) {
+    const conflictFilter = filterCheckboxList.find(checkbox => checkbox.id === checkboxId);
+    conflictFilter.closest('.filter__label').classList.add('filter__hover-reaction');
+    conflictFilter.disabled = false;
+};
+
+function checkСompatibility(checkboxId) {
+    if (conflictFiltersList[checkboxId]) {
+        conflictFiltersList[checkboxId].forEach(filter => disableCheckbox(filter));
+    }
+}
+
+function resetСompatibility(checkboxId) {
+    if (conflictFiltersList[checkboxId]) {
+        conflictFiltersList[checkboxId].forEach(filter => enableCheckbox(filter));
+    }
+}
+//Конец раздела взаимоисключения фильтров
+
 //список функций, отвечающих за фильтрацию
 function returnTitle(id) {
     switch (id) {
@@ -140,10 +175,16 @@ function returnTitle(id) {
 
 
 function removeFilterFromActiveList(id) {
+    if (id === 'status_inactive') {
+        id = 'status_completed';
+    }
     filterActiveList = filterActiveList.filter(elem => elem !== id);
 }
 
 function insertFilterToActiveList(id) {
+    if (id === 'status_inactive') {
+        id = 'status_completed';
+    }
     filterActiveList.push(id);
 }
 
@@ -174,6 +215,7 @@ function updateDisplayItems() {
 function cancelFilter(filterId) {
     resetCheckBox(filterId);
     removeTag(filterId);
+    resetСompatibility(filterId);
     removeFilterFromActiveList(filterId);
 }
 
@@ -198,12 +240,13 @@ function renderTag(checkboxId) {
 
 function addFilter(checkboxId){
     insertFilterToActiveList(checkboxId);
+    checkСompatibility(checkboxId);
     renderTag(checkboxId);
 }
 
 function switchFilter(checkbox){
     if(checkbox.checked) {
-        addFilter(checkbox.id);
+        addFilter(checkbox.id);        
     }
     if(!checkbox.checked) {
         cancelFilter(checkbox.id);
@@ -212,9 +255,10 @@ function switchFilter(checkbox){
 }
 
 function resetFilter() {
-    filterActiveList.forEach(activeFilter => {
-        cancelFilter(activeFilter);
-    });
+    filterCheckboxList.find(checkbox => {
+        if (checkbox.checked) {
+            cancelFilter(checkbox.id);
+        }});
     updateDisplayItems();
 }
 //конец списка функций, отвечающих за фильтрацию
