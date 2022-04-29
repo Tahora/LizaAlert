@@ -3,4 +3,13 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    transition: color 0.15s;
+}
+
+.filter__checkbox:checked ~ .filter__item-title {
+    color: #F06000;
+}
+
+.filter__checkbox:disabled ~ .filter__item-title {
+    color: #E6E7EB;
 }

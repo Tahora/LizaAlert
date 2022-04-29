@@ -68,6 +68,7 @@
 @import url(../blocks/course-list/__icon/course-list__icon.css);
 @import url(../blocks/course-list/__image/course-list__image.css);
 @import url(../blocks/course-list/__item/course-list__item.css);
+@import url(../blocks/course-list/__item/_hide/course-list__item_hide.css);
 @import url(../blocks/course-list/__info/course-list__info.css);
 @import url(../blocks/course-list/__text-area/course-list__text-area.css);
 @import url(../blocks/course-list/__button/course-list__button.css);
