@@ -53,3 +53,9 @@
 @import url(../blocks/btn/btn.css);
 @import url(../blocks/profile/__exit-btn/profile__exit-btn.css);
 @import url(../blocks/profile/__submit-btn/profile__submit-btn.css);
+
+
+@import url(../blocks/how-to/how-to.css);
+@import url(../blocks/how-to/_second/how-to_second.css);
+@import url(../blocks/how-to/__text/_first/how-to__text_first.css);
+@import url(../blocks/how-to/__list/how-to__list.css);
