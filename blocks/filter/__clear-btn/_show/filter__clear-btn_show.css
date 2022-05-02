@@ -1,0 +1,5 @@
+.filter__clear-btn_show {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s, visibility 0s;
+}
