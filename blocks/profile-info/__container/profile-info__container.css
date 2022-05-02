@@ -1,8 +1,0 @@
-.profile-info__container {
-  box-sizing: border-box;
-  width: 248px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Golos', sans-serif;
-}

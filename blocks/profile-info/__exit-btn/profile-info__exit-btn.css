@@ -1,8 +1,0 @@
-.profile-info__exit-btn {
-  display: flex;
-  padding: 12px 22px;
-}
-
-.profile-info__exit-btn:hover{
-  border: 1.2px solid #ff6600;
-}
