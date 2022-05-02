@@ -11,4 +11,3 @@
 * Js
 * Trello
 * Slack
-* Css
