@@ -1,6 +1,0 @@
-.course-list {
-    display: grid;
-    gap: 24px;
-    grid-auto-flow: row;
-    align-items:flex-start;
-}
