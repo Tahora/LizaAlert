@@ -1,8 +1,0 @@
-.filter__tags {
-    margin: 32px 0 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
