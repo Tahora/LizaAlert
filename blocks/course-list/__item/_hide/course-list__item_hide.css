@@ -1,6 +1,0 @@
-.course-list__item_hide {
-    /*display: none;*/
-    max-height: 0;
-    opacity: 0;
-    position: absolute;
-}
