@@ -1,0 +1,10 @@
+.profile-info {
+  width: 312px;
+  height: 512px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px 0 rgba(231, 232, 235, .8), 0 0 4px 0 rgba(231, 232, 235, .8) ;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}

@@ -1,0 +1,6 @@
+.btn__icon {
+  background-image: url('../../../images/btn__icon.svg');
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
