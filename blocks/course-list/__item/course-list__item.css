@@ -1,0 +1,10 @@
+.course-list__item {
+    width: 100%;
+    display: grid;
+    align-items: stretch;
+    gap: 24px;
+    grid-template-columns: 200px 1fr 288px ;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(231, 232, 235, 0.6), 0px 4px 16px rgba(231, 232, 235, 0.6);
+    border-radius: 16px;
+}
