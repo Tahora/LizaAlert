@@ -1,0 +1,11 @@
+.filter__tag-cross {
+    margin: 0 2px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    width:  20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    background-image: url('../../../images/filter_tag_clear.svg');
+}
