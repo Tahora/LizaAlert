@@ -1,0 +1,8 @@
+.filter__item {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}

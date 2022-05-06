@@ -1,0 +1,8 @@
+.card__input-pencile {
+    position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 3px;
+  right: -11px;
+}

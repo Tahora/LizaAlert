@@ -1,0 +1,11 @@
+.btn_active {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 50px;
+}
+
+.btn_active:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #e6e7eb;
+}

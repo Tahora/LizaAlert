@@ -1,0 +1,9 @@
+.filter__tag-title {
+    margin: 0 0 0 8px;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
